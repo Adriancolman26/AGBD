@@ -16,5 +16,7 @@ ORDER BY rental_rate DESC, title ASC
 
 -- Ejercicio 4
 
-
+SELECT DISTINCT city, p.country from city c
+JOIN country p ON c.country_id = p.country_id
+GROUP BY country
 
