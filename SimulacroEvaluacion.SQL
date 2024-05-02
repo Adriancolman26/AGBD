@@ -20,3 +20,10 @@ SELECT DISTINCT city, p.country from city c
 JOIN country p ON c.country_id = p.country_id
 GROUP BY country
 
+-- Ejercicio 5 
+
+SELECT COUNT(city) as cant_ciud, p.country FROM city c
+JOIN country p on p.country_id = c.country_id
+GROUP BY country
+ORDER BY cant_ciud DESC
+
