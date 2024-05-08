@@ -20,4 +20,9 @@
     JOIN regions r on r.region_id = c.region_id
     ORDER BY region_name ASC
 
-5
+-- Ejercicio 5
+
+5 - SELECT e.first_name, e.last_name, e.salary, d.department_name FROM employees e
+    JOIN departments d on d.department_id = e.department_id
+    WHERE e.salary BETWEEN 9000 and 17000 
+    ORDER BY e.salary DESC
