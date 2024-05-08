@@ -26,3 +26,10 @@
     JOIN departments d on d.department_id = e.department_id
     WHERE e.salary BETWEEN 9000 and 17000 
     ORDER BY e.salary DESC
+
+-- Ejercicio 6
+
+6 - SELECT count(*) as Cant_Paises, r.region_name FROM countries c
+    JOIN regions r on r.region_id = c.region_id
+    GROUP BY r.region_id
+    HAVING Cant_Paises > 5 
