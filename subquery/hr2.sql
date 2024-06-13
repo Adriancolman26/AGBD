@@ -24,3 +24,10 @@ VALUES ("CV", "Cabo Verde",(SELECT region_id FROM regions WHERE region_name LIKE
        ("PA", "Palestina",(SELECT region_id FROM regions WHERE region_name LIKE "Middle East")),
        ("IR", "Irán",(SELECT region_id FROM regions WHERE region_name LIKE "Middle East"))
 
+--5) Borrar un usuario que tenga posts, haciendo primero un DELETE con subquery que borre todos los post de ese usuario.
+
+DELETE FROM post
+WHERE author_id = (SELECT id FROM user WHERE username LIKE "Nieto911")
+
+DELETE FROM user
+WHERE id = (SELECT id FROM user WHERE username LIKE "Nieto911")
